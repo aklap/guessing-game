@@ -1,25 +1,27 @@
 #!/usr/bin/env bash
 
 function game {
-local guess
-local answer=$(ls | wc -l)
+  local answer=$(ls | wc -l)
+  local is_over=false
 
-echo "Guess how many files are in the current directory"
-read response
 
-while [[ $response -ne $answer ]]
-do
-  if [[ $response -lt $answer ]]
-  then
-    hint="too low"
-  elif [[ $response -gt $answer ]]
+  while [[ $is_over = false ]]
+  do
+    echo "Please enter a guess:"
+    read response
+
+    if [[ $response -lt $answer ]]
     then
-      hint="too high"
+      echo "Your guess was too low."
+    elif [[ $response -gt $answer ]]
+    then
+      echo "Your guess was too high."
+    else
+      echo "Congratulations, that was the correct answer!"
+      is_over=true
     fi
-    echo "$hint"
-    game
-  done
+    done
 }
 
+echo "How many files are in the current directory?"
 game
-echo "correct"
