@@ -19,7 +19,7 @@ function game {
       echo "Congratulations, that was the correct answer!"
       is_over=true
     fi
-    done
+  done
 }
 
 echo "How many files are in the current directory?"
