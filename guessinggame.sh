@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 
 function game {
-  local answer=$(ls | wc -l)
+  local answer=$(ls -la | wc -l)
   local is_over=false
 
   while [[ $is_over = false ]]
