@@ -2,9 +2,9 @@
 
 function game {
   local answer=$(ls -la | wc -l)
-  local is_over=false
+  local solved=false
 
-  while [[ $is_over = false ]]
+  while [[ $solved = false ]]
   do
     echo "Please enter a guess:"
     read response
@@ -17,7 +17,7 @@ function game {
       echo "Your guess was too high."
     else
       echo "Congratulations, that was the correct answer!"
-      is_over=true
+      solved=true
     fi
   done
 }
