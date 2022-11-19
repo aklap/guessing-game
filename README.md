@@ -1,6 +1,5 @@
 Guessing Game
 --------------
 
-Last run: Fri Nov 18 22:02:52 EST 2022
-
-Lines of code:       24
+Last run: Fri Nov 18 22:44:44 EST 2022
+22
